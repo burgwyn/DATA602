@@ -45,8 +45,11 @@ crossval = CrossValidator(estimator=als,
 # cross validate create best model
 cvModel = crossval.fit(trainDF)
 
+# display best model
+print(cvModel.bestModel)
+
 # assess prediction model
 cvPred = cvModel.bestModel.transform(testDF)
-evaluator.evaluate(cvPred)
+print(evaluator.evaluate(cvPred))
 
-cvModel.bestModel
+spark.stop()
