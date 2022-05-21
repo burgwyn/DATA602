@@ -41,11 +41,11 @@ docker pull jupyter/pyspark-notebook:latest
 docker run -p 8888:8888 jupyter/pyspark-notebook
 ```
 
-Upload the notebook, `ALS.ipynb`, into the running Docker container to review and execute.
+Upload the notebook, `ALS.ipynb`, into the running Docker container to review and execute.  It also requires `REC_Collaborative_Facility.csv` as an input. 
 
 ### SVD
 
-SVD.ipynb - applies Singular Variable Decomposition
+`SVD.ipynb` applies Singular Value Decomposition using [Suprise](http://surpriselib.com/) library.  It requires `REC_Collaborative_Facility.csv` as an input.
 
 ## Content Filtering
 
