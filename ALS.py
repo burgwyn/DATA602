@@ -33,9 +33,9 @@ evaluator = RegressionEvaluator(metricName="rmse", labelCol="rating",predictionC
 
 # set parameters for tuning
 paramGrid = ParamGridBuilder()\
-    .addGrid(als.maxIter, [5, 10, 15, 25])\
-    .addGrid(als.rank, [10, 20, 50, 100])\
-    .addGrid(als.regParam, [0.001, 0.01, 0.1, 0.2])\
+    .addGrid(als.maxIter, [5, 10, 25])\
+    .addGrid(als.rank, [10, 50, 100])\
+    .addGrid(als.regParam, [0.001, 0.01, 0.1])\
     .build()
 
 crossval = CrossValidator(estimator=als,
